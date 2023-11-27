@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% from 'macros/book-table.html' import book_table %}
+{% from 'macros/month-select.html' import month_select%}
+{% from 'macros/order-field-select.html' import order_field_select%}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Книги</title>
+    <link rel="stylesheet" href="../css/table.css">
+    <link rel="stylesheet" href="../css/filter.css">
+</head>
+<body>
+  <div class="filter">
+      <div>
+          <p>Месяц</p>
+          {{ month_select(months) }}
+      </div>
+
+      <div>
+          <p>Сортировка</p>
+          {{ order_field_select(fields) }}
+      </div>
+  </div>
+  <div class="body">
+      {{ book_table(books) }}
+  </div>
+</body>
+</html>

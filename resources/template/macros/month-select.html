@@ -1,0 +1,7 @@
+{% macro month_select(months) %}
+  <select name="month">
+      {% for serial, title in months.items() %}
+        <option value="{{ serial }}">{{ title }}</option>
+      {% endfor %}
+  </select>
+{% endmacro %}

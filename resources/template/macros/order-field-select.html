@@ -1,0 +1,7 @@
+{% macro order_field_select(fields) %}
+  <select name="order">
+      {% for field in fields %}
+        <option value="{{ field['value'] }}">{{ field["title"]}}</option>
+      {% endfor %}
+  </select>
+{% endmacro %}
