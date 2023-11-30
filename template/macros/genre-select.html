@@ -1,0 +1,13 @@
+{% macro genre_select(cur_genre_id, genres) %}
+    <label> Жанр
+        <select name="genre">
+            {% for genre in genres %}
+                <option value="{{ genre.get_id() }}"
+                        {% if genre.get_id() == cur_genre_id %}
+                            selected
+                        {% endif %}
+                >{{ genre.get_name() }}</option>
+            {% endfor %}
+        </select>
+    </label>
+{% endmacro %}

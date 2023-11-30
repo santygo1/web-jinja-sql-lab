@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="library.sqlite" uuid="ae2891f4-7b21-4aad-aa69-c6d13d7b9d91">
+    <data-source source="LOCAL" name="library.sqlite" uuid="d10766b3-ff33-42a4-b887-89193eb8e3ae">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/resources/library.sqlite</jdbc-url>
+      <jdbc-url>jdbc:sqlite:D:\source\PyCharm\pythonProject\library.sqlite</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

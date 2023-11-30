@@ -1,0 +1,25 @@
+{# private #}
+{% macro book_tr(title, reader, genre, date) %}
+    <tr>
+        <td>{{ title }}</td>
+        <td>{{ reader }}</td>
+        <td>{{ genre }}</td>
+        <td>{{ date }}</td>
+    </tr>
+{% endmacro %}
+
+{% macro book_table(books) %}
+    <table class="books-table">
+        <thead>
+        <th>Название</th>
+        <th>Читатель</th>
+        <th>Жанр</th>
+        <th>Дата</th>
+        </thead>
+        <tbody>
+        {% for book in books %}
+            {{ book_tr(book.get_title(), book.get_reader(),book.get_genre().get_name(), book.get_date()) }}
+        {% endfor %}
+        </tbody>
+    </table>
+{% endmacro %}

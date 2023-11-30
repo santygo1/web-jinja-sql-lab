@@ -3,7 +3,7 @@
 
 {% from 'macros/book-table.html' import book_table %}
 {% from 'macros/month-select.html' import month_select%}
-{% from 'macros/order-field-select.html' import order_field_select%}
+{% from 'macros/genre-select.html' import genre_select%}
 
 <head>
     <meta charset="UTF-8">
@@ -13,15 +13,8 @@
 </head>
 <body>
   <div class="filter">
-      <div>
-          <p>Месяц</p>
-          {{ month_select(months) }}
-      </div>
-
-      <div>
-          <p>Сортировка</p>
-          {{ order_field_select(fields) }}
-      </div>
+          {{ month_select(filter["month"], months) }}
+          {{ genre_select(filter["genre"], genres) }}
   </div>
   <div class="body">
       {{ book_table(books) }}

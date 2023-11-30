@@ -1,0 +1,13 @@
+{% macro month_select(cur_month, months) %}
+    <label>Месяц
+        <select name="month">
+            {% for k,v in months.items() %}
+                <option value="{{ k }}"
+                        {% if k == cur_month %}
+                            selected
+                        {% endif %}
+                >{{ v }}</option>
+            {% endfor %}
+        </select>
+    </label>
+{% endmacro %}
